@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RandomTimer</title>
+    <script src="./main.js"></script>
+  <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="center">
+      <div class="container" id="intro">
+        <h1>RandomTimer</h1>
+        <h4 style="max-width: 30rem;">Put in a list and it will go through the list having a randomized delayed between each entry. Refresh to restart.<h4>
+        <h3>List to Appear</h3>
+        <textarea name="list" id="list" cols="30" rows="10"></textarea>
+        <br />
+        <h3>Splitter Type</h3>
+        <div class="radio-option">
+            <input type="radio" id="line" name="splitter" value="line" checked />
+            <label for="line" class="radio">Line</label>
+        </div>
+        <div class="radio-option">
+            <input type="radio" id="space" name="splitter" value="space" />
+            <label for="space" class="radio">Space (e.g.A B C D)</label>
+        </div>
+        <div class="radio-option">
+            <input type="radio" id="character" name="splitter" value="character" />
+            <label for="character" class="radio">Character (e.g. ABCBD)</label>
+        </div>
+        
+        <h3>Timer Settings</h3>
+        <input type="number" id="time" placeholder="Guaranteed Time (s)" />
+        <br>
+        <input type="number" id="random" placeholder="Random Buffer (s)" />
+        <br>
+        <input type="number" id="entry" placeholder="Time to See Value (s)" />
+        <h3>Sound Effect</h3>
+        <div class="radio-option">
+            <input type="radio" id="none" name="sound" value="none" checked>
+            <label for="none" class="radio">None</label>
+        </div>
+        <div class="radio-option">
+            <input type="radio" id="bomb" name="sound" value="bomb">
+            <label for="bomb" class="radio">Alarm</label>
+        </div>
+        <div class="radio-option">
+            <input type="radio" id="alarm" name="sound" value="alarm">
+            <label for="alarm" class="radio">Buzz</label>
+        </div>
+        <button id="factor" onclick="start()">Start</button>
+      </div>
+      <div id="timer">
+        <h1 id="times"></h1>
+      </div>
+    </div>
+  </body>
+</html>
